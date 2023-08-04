@@ -1,0 +1,44 @@
+Design a C++ program for sorting names using file handling.
+#include <iostream>
+#include <fstream>
+using namespace std;
+intmain()
+{
+  ifstream in("C:\\file1.txt"); // input  
+  if(!in)
+  {
+    cout <<"Cannot open input file.\n";
+    return1;
+  }  
+ofstream out("TextFile1.txt"); // output
+if(!out)
+{
+  cout <<"Cannot open output file.\n";
+  return1;
+}
+char str[5][20];
+chart[20];
+inti,j;
+cout<<"file contents \n";
+for(inti=0;i<5;i++)
+{
+  in>>str[i];  
+  cout<<str[i]<<endl;
+}
+for(i=1;i<5;i++)
+{
+  for(j=1;j<5;j++)
+  {
+    if(strcmp(str[j-1],str[j])>0)
+    {
+        strcpy(t,str[j-1]);
+        strcpy(str[j-1],str[j]);strcpy(str[j],t);
+    }
+  }
+}
+cout<<"Strings (Names) in alphabetical order : \n";  
+for(i=0;i<5; i++)
+{
+  cout<<str[i]<<"\n";out<<str[i]<<"\n";
+}
+}
